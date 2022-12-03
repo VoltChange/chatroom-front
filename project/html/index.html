@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>首页</title>
+    <link rel="stylesheet" href="../css/index.css">
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script type="module" src="../js/index.js"></script>
+</head>
+<body>
+    <div class="Main-Container">
+        <div class="chat">
+            <div class="chatSideBar">
+                <div class="chatSideBar-title">
+                    好友
+                </div>
+                <div class="">
+                    a
+                </div>
+                <ul class="friendList">
+                    <li>A</li>
+                    <li>A</li>
+                    <li>D</li>
+                    <li>c</li>
+                </ul>
+            </div>
+            <div class="ChatBox ChatBox">
+                <header class="ChatBox-title">{{ contactPerson }}</header>
+                <div class="MessagesBox-wrapper">
+                    <div class="MessagesBox" role="list" id="scrollDiv">
+                    </div>
+                </div>
+                <div class="InputBox">
+                    <ul class="ToolBar">
+                        <li class="ToolBar-item">a</li>
+                        <li class="ToolBar-item">b</li>
+                        <li class="ToolBar-item">c</li>
+                    </ul>
+                    <label class="InputBox-input">
+                        <textarea name="" id="textarea" class="Input"></textarea>
+                    </label>
+                    <div class="InputBox-footer">
+                        <div class="InputBox-footerDesc css-1zwx8a">按 Enter 键发送</div>
+                        <button class="Button InputBox-sendBtn Button--primary Button--blue">
+                            发送
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="card Personal-Info">
+            <div class="circle">
+                <div class="imgBx">
+                    <img src="https://gimg3.baidu.com/search/src=http%3A%2F%2Fpics2.baidu.com%2Ffeed%2F1b4c510fd9f9d72ab8f354a0791c713f359bbbbe.jpeg%40f_auto%3Ftoken%3D7de93c6e80ef4a2b1897e21900eb97dc&refer=http%3A%2F%2Fwww.baidu.com&app=2021&size=f360,240&n=0&g=0n&q=75&fmt=auto?sec=1670086800&t=ec9a8920c34fb3b444ff11405d11f24e" alt="">
+                </div>
+            </div>
+            <div class="content">
+                <a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
+                <h3 >用户名</h3>
+                <div class="textIcon">
+                    <h1 id="p-name">Website Developer</h1>
+                    <a href="#"><i class="fa fa-arrow-right" aria-hidden="true"></i></a>
+                </div>
+                <hr>
+                <div style="margin-top: 10px">
+                    <h3 style="margin-bottom: 10px"> 个人简介</h3>
+                    <textarea class="introduction" id="p-introduction">default</textarea>
+                    <button class="Button InputBox-sendBtn Button--primary Button--blue" id="save-introduction">
+                        保存
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+<style>
+
+</style>

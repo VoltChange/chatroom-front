@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/login.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@300&display=swap" rel="stylesheet">
+    <title>登录页面</title>
+</head>
+<body>
+    <div class="body-container">
+    <div class="container" id="container">
+        <div>
+        <div class="form-container sign-up-container">
+            <form action="#">
+                <h1>创建账户</h1>
+                <input type="text" placeholder="用户名" id="signUpUserName"/>
+                <input type="password" placeholder="密码" id="signUpPassword" />
+                <div class="btn-grad" id="signUpSubmit">注册</div>
+            </form>
+        </div>
+        <div class="form-container sign-in-container">
+            <form action="#">
+                <h1>登录</h1>
+                <input type="text" placeholder="用户名" id="signInUserName"/>
+                <input type="password" placeholder="密码" id="signInPassword"/>
+                <div class="btn-grad" id="signInSubmit" >登录</div>
+            </form>
+        </div>
+        </div>
+
+        <div>
+        <div class="overlay-container">
+            <div class="overlay">
+                <div class="overlay-panel overlay-left">
+                    <h1>欢迎回来</h1>
+                    <p>
+                        开始新的聊天
+                    </p>
+                    <div class="btn-grad" id="signIn">登录</div>
+                </div>
+                <div class="overlay-panel overlay-right">
+                    <h1>现在开始</h1>
+                    <p>从现在开始加入聊天</p>
+                    <div class="btn-grad" id="signUp">注册</div>
+                </div>
+            </div>
+        </div>
+        </div>
+    </div>
+
+    </div>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script type="module" src="../js/loginpage.js"></script>
+
+</body>
+</html>
