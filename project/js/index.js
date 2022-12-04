@@ -100,11 +100,14 @@ window.onload = function ()
         })
     }
 
-    //开始聊天
+    //选择人开始聊天
     function startChat(friendId,friendName){
         let chatBoxTitle = document.getElementById("chatBox-title")
         chatBoxTitle.innerHTML = friendName
         toUserId = friendId
+        //刷新聊天
+        messages =[]
+        refreshMessagesBox()
     }
 
     //聊天部分
@@ -132,8 +135,13 @@ window.onload = function ()
             };
             //获得消息事件
             socket.onmessage = function(msg) {
-                console.log(msg.data);
+                let message = JSON.parse(msg.data)
+                console.log(message);
                 //发现消息进入    开始处理前端触发逻辑
+                console.log(message.fromUserId);
+                if(msg.data.fromUserId===toUserId){
+                    addReceivedMessageInBox(msg.data.contentText)
+                }
             };
             //关闭事件
             socket.onclose = function() {
@@ -153,6 +161,7 @@ window.onload = function ()
             const textarea = document.getElementById("textarea")
             console.log('{"toUserId":"'+toUserId+'","contentText":"'+textarea.value+'"}');
             socket.send('{"toUserId":"'+toUserId+'","contentText":"'+textarea.value+'"}');
+            addSentMessageInBox(textarea.value)
         }
     }
     const sendBtn = document.getElementById("sendBtn")
@@ -162,6 +171,35 @@ window.onload = function ()
         else{
             sendMessage()
         }
+    }
+
+    var messages =[
+    ]
+    const messagesBox = document.getElementById("messagesBox")
+    function refreshMessagesBox() {
+        messagesBox.innerHTML =""
+        for (var message of messages){
+            console.log(message)
+            if(message.type=='sent')
+            {
+                addSentMessageInBox(message.context)
+            }else{
+                addReceivedMessageInBox(message.context)
+            }
+        }
+    }
+
+    function addSentMessageInBox(message){
+        const m = document.createElement("div")
+        m.setAttribute("class","message-sent")
+        m.innerHTML = message
+        messagesBox.append(m)
+    }
+    function addReceivedMessageInBox(message){
+        const m = document.createElement("div")
+        m.setAttribute("class","message-received")
+        m.innerHTML = message
+        messagesBox.append(m)
     }
 };
 

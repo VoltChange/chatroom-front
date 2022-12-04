@@ -393,3 +393,67 @@ body:hover{
     border: 1px solid;
     border-radius: 3px;
 }
+
+/* 聊天气泡*/
+.message-received {
+    width: 220px;
+    margin-top: 20px;
+    margin-left: 50px;
+    padding: 11px 16px;
+    background: #9EEA6A;
+    position: relative;
+    -moz-border-radius:    10px;
+    -webkit-border-radius: 10px;
+    border-radius:         10px;
+    word-wrap:break-word;
+    word-break:break-all;
+}
+.message-received:before {
+    content:"";
+    position: absolute;
+    right: 100%;
+    top: 16px;
+    width: 0;
+    height: 0;
+    border-top: 13px solid transparent;
+    border-right: 26px solid #9EEA6A;
+    border-bottom: 13px solid transparent;
+}
+.message-received-context{
+    height:fit-content;
+    padding: 11px 16px;
+    position: absolute;
+    top: 5px;
+    left: 5px;
+}
+
+.message-sent {
+    padding: 11px 16px;
+    left: 60%;
+    margin-top: 20px;
+    margin-right: 50px;
+    width: 220px;
+    background: #9EEA6A;
+    position: relative;
+    -moz-border-radius:    10px;
+    -webkit-border-radius: 10px;
+    border-radius:         10px;
+    word-wrap:break-word;
+    word-break:break-all;
+}
+.message-sent:before {
+    content:"";
+    position: absolute;
+    left: 100%;
+    top: 16px;
+    width: 0;
+    height: 0;
+    border-top: 13px solid transparent;
+    border-left: 26px solid #9EEA6A;
+    border-bottom: 13px solid transparent;
+}
+.message-sent-context{
+    position: absolute;
+    top: 5px;
+    left: 5px;
+}
