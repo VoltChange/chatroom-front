@@ -39,11 +39,11 @@ export function register(data) {
     })
 }
 
-export function briefInfo(username) {
+export function briefInfo(userId) {
     return axios({
         method: 'get',
-        url: baseurl +'api/user/briefInfo',
-        params:{username:username}
+        url: baseurl +'api/user/briefInfoById',
+        params:{id:userId}
     })
 }
 
@@ -54,6 +54,44 @@ export function changeIntroduction(id,introduction){
         params:{
             id:id,
             introduction:introduction
+        }
+    })
+}
+export function friendList(userId){
+    return axios({
+        method: 'get',
+        url: baseurl +'api/friend/friendList',
+        params:{
+            userId:userId,
+        }
+    })
+}
+export function strangerList(userId){
+    return axios({
+        method: 'get',
+        url: baseurl +'api/friend/strangerList',
+        params:{
+            userId:userId,
+        }
+    })
+}
+export function becomeFriend(userId,friendId){
+    return axios({
+        method: 'get',
+        url: baseurl +'api/friend/become',
+        params:{
+            userId:userId,
+            friendId:friendId
+        }
+    })
+}
+export function cancelFriend(userId,friendId){
+    return axios({
+        method: 'get',
+        url: baseurl +'api/friend/cancel',
+        params:{
+            userId:userId,
+            friendId:friendId
         }
     })
 }
