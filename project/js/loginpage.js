@@ -28,7 +28,7 @@ window.onload=function (){
         }
         login(loginData).then(function (response) {
             if(response.status===200){
-                sessionStorage.setItem('username',signInUserName);
+                sessionStorage.setItem('userId',response.data);
                 window.location.href='index.html'
             }else{
                 alert(response.data);

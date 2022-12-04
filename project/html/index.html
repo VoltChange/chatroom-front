@@ -11,23 +11,63 @@
     <div class="Main-Container">
         <div class="chat">
             <div class="chatSideBar">
-                <div class="chatSideBar-title">
-                    好友
+                <div class="fsList">
+                    <div class="chatSideBar-title">
+                        好友
+                    </div>
+                    <ul class="friendList" id="friends">
+                    </ul>
                 </div>
-                <div class="">
-                    a
+                <div class="fsList">
+                    <div class="chatSideBar-title">
+                        陌生人
+                    </div>
+                    <ul class="strangerList" id="strangers">
+                    </ul>
                 </div>
-                <ul class="friendList">
-                    <li>A</li>
-                    <li>A</li>
-                    <li>D</li>
-                    <li>c</li>
-                </ul>
             </div>
             <div class="ChatBox ChatBox">
-                <header class="ChatBox-title">{{ contactPerson }}</header>
+                <header class="ChatBox-title" id="chatBox-title">{{ contactPerson }}</header>
                 <div class="MessagesBox-wrapper">
-                    <div class="MessagesBox" role="list" id="scrollDiv">
+                    <div class="MessagesBox" role="list" id="messagesBox">
+                        <div class="message-received">
+                            woshishabi
+                            woshishabi
+                            woshishabi
+                            woshishabi
+                            woshishabi
+                        </div>
+                        <div class="message-received">
+                            woshishabi
+                            woshishabi
+                            woshishabi
+                            woshishabi
+                            woshishabi
+                        </div>
+                        <div class="message-received">
+                            woshishabi
+                            woshishabi
+                            woshishabi
+                            woshishabi
+                            woshishabi
+                        </div>
+                        <div class="message-sent">
+                            woshishabi
+                            woshishabi
+                            woshishabi
+                            woshishabi
+                            woshishabi
+                        </div>
+                        <div class="message-sent">
+                            woshishabi
+                        </div>
+                        <div class="message-received">
+                            woshishabi
+                            woshishabi
+                            woshishabi
+                            woshishabi
+                            woshishabi
+                        </div>
                     </div>
                 </div>
                 <div class="InputBox">
@@ -41,7 +81,7 @@
                     </label>
                     <div class="InputBox-footer">
                         <div class="InputBox-footerDesc css-1zwx8a">按 Enter 键发送</div>
-                        <button class="Button InputBox-sendBtn Button--primary Button--blue">
+                        <button class="Button InputBox-sendBtn Button--primary Button--blue" id="sendBtn">
                             发送
                         </button>
                     </div>
